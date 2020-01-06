@@ -48,5 +48,21 @@ router.put('/:id', (req, res) => {
         })
 })
 
+// DEL endpoint to remove a restaurant
+
+router.delete('/:id', (req, res) => {
+    Restaurants.remove(req.params.id)
+        .then(removed => {
+            if (removed) {
+                res.status(200).json({ message: 'Restaurant successfully deleted', removed });
+            } else {
+                res.status(404).json({ message: 'The restaurant with that ID does not exist' });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(500).json({ message: 'The restaurant could not be deleted' });
+        })
+})
 
 module.exports = router;
