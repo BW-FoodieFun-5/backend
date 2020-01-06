@@ -8,7 +8,7 @@ exports.up = function (knex) {
             .references('id')
             .inTable('restaurants')
             .onDelete('CASCADE')
-            .onUpdage('CASCADE');
+            .onUpdate('CASCADE');
 
         tbl.string('itemName', 128)
             .notNullable()
