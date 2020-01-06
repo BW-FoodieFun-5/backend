@@ -6,6 +6,7 @@ const authenticate = require('../auth/authenticate-middleware');
 const authRouter = require('../auth/auth-router');
 const usersRouter = require('../users/users-router');
 const restaurantRouter = require('../restaurants/restaurants-router');
+const menuItemRouter = require('../menuItems/menuItems-router');
 
 const server = express();
 
@@ -16,6 +17,7 @@ server.use(express.json());
 server.use('/api/auth', authRouter);
 server.use('/api/users', usersRouter);
 server.use('/api/restaurants', restaurantRouter);
+server.use('/api/menu', menuItemRouter);
 
 server.get('/', (req, res) => {
     res.send("It's working!");
