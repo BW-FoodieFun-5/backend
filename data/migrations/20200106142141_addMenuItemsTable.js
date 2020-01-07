@@ -2,7 +2,7 @@
 exports.up = function (knex) {
     return knex.schema.createTable('menuItems', tbl => {
         tbl.increments();
-        tbl.integer('id')
+        tbl.integer('restaurants_id')
             .unsigned()
             .notNullable()
             .references('id')

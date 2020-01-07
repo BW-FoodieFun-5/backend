@@ -7,10 +7,17 @@ module.exports = {
     findById,
     update,
     remove,
+    getRestaurantMenuItems,
 };
 
 function find() {
     return db('menuItems').select('id', 'itemName', 'cuisineType', 'price', 'itemRating', 'itemReview');
+}
+
+function getRestaurantMenuItems(restaurants_id) {
+    return db('menuItems')
+        .innerJoin('restaurants', 'menuItems.restaurants_id', '=', 'restaurant.id')
+        .where({ restaurants_id })
 }
 
 function findBy(filter) {
