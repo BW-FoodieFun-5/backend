@@ -10,7 +10,7 @@ module.exports = {
 };
 
 function find() {
-    return db('restaurants').select('id', 'name', 'cuisineType', 'location', 'hoursOperation', 'rating', 'review');
+    return db('restaurants').select('id', 'name', 'cuisineType', 'location', 'hoursOperation', 'description', 'image', 'rating', 'review');
 }
 
 function findBy(filter) {
