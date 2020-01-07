@@ -11,6 +11,10 @@ exports.up = function (knex) {
             .notNullable();
         tbl.string('hoursOperation', 128)
             .notNullable();
+        tbl.string('description', 255)
+            .notNullable();
+        tbl.string('image', 255)
+            .notNullable();
         tbl.string('rating', 128)
             .notNullable();
         tbl.string('review', 255)
