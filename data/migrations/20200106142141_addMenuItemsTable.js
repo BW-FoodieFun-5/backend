@@ -19,7 +19,7 @@ exports.up = function (knex) {
             .notNullable();
         tbl.string('description', 255)
             .notNullable();
-        tble.string('image', 255)
+        tbl.string('image', 255)
             .notNullable();
         tbl.string('itemRating', 128)
             .notNullable();

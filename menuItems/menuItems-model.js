@@ -11,7 +11,7 @@ module.exports = {
 };
 
 function find() {
-    return db('menuItems').select('id', 'itemName', 'cuisineType', 'price', 'itemRating', 'itemReview');
+    return db('menuItems').select('id', 'itemName', 'cuisineType', 'price', 'description', 'image', 'itemRating', 'itemReview');
 }
 
 function getRestaurantMenuItems(restaurants_id) {
