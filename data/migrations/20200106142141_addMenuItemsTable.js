@@ -2,13 +2,13 @@
 exports.up = function (knex) {
     return knex.schema.createTable('menuItems', tbl => {
         tbl.increments();
-        tbl.integer('restaurants_id')
-            .unsigned()
-            .notNullable()
-            .references('id')
-            .inTable('restaurants')
-            .onDelete('CASCADE')
-            .onUpdate('CASCADE');
+        // tbl.integer('restaurants_id')
+        //     .unsigned()
+        //     .notNullable()
+        //     .references('id')
+        //     .inTable('restaurants')
+        //     .onDelete('CASCADE')
+        //     .onUpdate('CASCADE');
 
         tbl.string('itemName', 128)
             .notNullable()
