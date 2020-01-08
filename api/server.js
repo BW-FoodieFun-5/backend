@@ -20,7 +20,7 @@ server.use('/api/restaurants', restaurantRouter);
 server.use('/api/menu', menuItemRouter);
 
 server.get('/', (req, res) => {
-    res.send("It's working!");
+    res.status(200).json({ api: "It's working!", dbenv: process.env.DB_ENV });
 });
 
 module.exports = server;
