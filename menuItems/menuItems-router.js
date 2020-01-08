@@ -48,7 +48,7 @@ router.put('/:id', (req, res) => {
         })
 })
 
-// DEL endpoint to remove a restaurant
+// DEL endpoint to remove a menu item
 
 router.delete('/:id', (req, res) => {
     MenuItems.remove(req.params.id)
