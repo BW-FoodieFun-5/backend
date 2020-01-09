@@ -12,7 +12,6 @@ exports.up = function (knex) {
 
         tbl.string('itemName', 128)
             .notNullable()
-            .unique();
         tbl.string('cuisineType', 128)
             .notNullable();
         tbl.string('price', 255)
